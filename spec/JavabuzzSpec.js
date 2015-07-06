@@ -38,4 +38,24 @@ describe('Javabuzz', function() {
 
   });
 
+  describe('when playing, says', function() {
+
+    it('"Java" when a number is divisible by three', function() {
+      expect(javabuzz.says(3)).toEqual("Java");
+    });
+
+    it('"Java" when a number is divisible by five', function() {
+      expect(javabuzz.says(5)).toEqual("Buzz");
+    });
+
+    it('"Javabuzz" when a number is divisible by 15', function() {
+      expect(javabuzz.says(15)).toEqual("Javabuzz");
+    });
+
+    it('just the inputted number when not disible by 3, 5 or 15', function() {
+      expect(javabuzz.says(1)).toEqual(1);
+    });
+
+  });
+
 });
